@@ -1,4 +1,4 @@
-// Selection of elements from the index.html file
+// Selection of elements from the index
 const generateBtn = document.getElementById("generateButton");
 const resetBtn = document.getElementById("resetButton");
 const spellArea = document.getElementById("spellArea");
@@ -18,10 +18,10 @@ generateBtn.addEventListener("click", function () {
   // Disables the button during the countdown so the user can't spam click it
   generateBtn.disabled = true;
 
-  let countdown = 3; // Starts the countdown at 3
-  spellArea.innerText = countdown; // Starts the display at 3
+  let countdown = 5; // Starts the countdown at 3
+  spellArea.innerText = countdown; // Starts the display at 5
 
-  // Start a timer that runs every second
+  // Starts a timer that runs every second
   timer = setInterval(function () {
     countdown--;
 
@@ -29,10 +29,10 @@ generateBtn.addEventListener("click", function () {
       // Update the text to 2, then 1
       spellArea.innerText = countdown;
     } else {
-      // The countdown hit 0, reveals the spell.
+      // When the countdown hits 0 it reveals the spell.
       clearInterval(timer); // Stops the countdown timer
 
-      // Pick a random ingredient from the list array
+      // Picks a random ingredient from the list array
       const randomIndex = Math.floor(Math.random() * ingredientsItems.length);
       const randomIngredient = ingredientsItems[randomIndex].innerText;
 
@@ -49,6 +49,6 @@ generateBtn.addEventListener("click", function () {
 resetBtn.addEventListener("click", function () {
   clearInterval(timer); // Stops the countdown if it's currently running
   spellArea.innerText = ""; // Clear text
-  spellArea.style.backgroundColor = ""; // Reset background to default
-  generateBtn.disabled = false; // Ensure generate button is usable
+  spellArea.style.backgroundColor = ""; // Resets background to default
+  generateBtn.disabled = false; // Ensures that the generate button is usable
 });
