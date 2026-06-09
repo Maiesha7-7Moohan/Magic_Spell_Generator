@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magical Spell Generator</title>
+    <style>
+      /* Styling to make the spell area visible and centered */
+      #spellArea {
+        margin: 20px auto 0 auto;
+        padding: 20px;
+        border: 2px dashed white;
+        min-height: 50px;
+        width: 300px;
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+      body {
+        background-color: #db79ee;
+        color: #5a2a83;
+        text-align: center;
+        padding: 50px;
+      }
+      button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #d3b1f1;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to the Magical Spell Generator!</h1>
+
+    <ul id="ingredientsList" style="list-style-position: inside; padding: 0">
+      <li>Dragon Scale</li>
+      <li>Phoenix Feather</li>
+      <li>Unicorn Horn</li>
+    </ul>
+
+    <button id="generateButton">⭑°.⋆꩜Generate Spell꩜⋆.°⭑</button>
+    <button id="resetButton">.𖥔 ݁ ˖Reset˖ ݁ 𖥔.</button>
+
+    <div id="spellArea"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
